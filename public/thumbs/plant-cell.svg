@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#070a14"/>
+  <rect x="85" y="45" width="230" height="190" rx="18" fill="#16a34a" fill-opacity="0.18" stroke="#16a34a" stroke-width="6"/>
+  <rect x="97" y="57" width="206" height="166" rx="12" fill="none" stroke="#facc15" stroke-width="2" stroke-opacity="0.6"/>
+  <ellipse cx="225" cy="140" rx="68" ry="52" fill="#38bdf8" fill-opacity="0.55"/>
+  <circle cx="138" cy="112" r="26" fill="#7c3aed"/>
+  <circle cx="141" cy="109" r="9" fill="#4c1d95"/>
+  <ellipse cx="142" cy="178" rx="18" ry="10" fill="#22c55e"/>
+  <ellipse cx="268" cy="186" rx="18" ry="10" fill="#22c55e"/>
+  <ellipse cx="195" cy="82" rx="16" ry="9" fill="#22c55e"/>
+  <text x="200" y="276" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">Plant Cell</text>
+</svg>
+

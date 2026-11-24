@@ -1,0 +1,223 @@
+{
+  "id": "plant-cell",
+  "version": 1,
+  "title": { "en": "Plant Cell" },
+  "category": "cells",
+
+  "model": {
+    "src": "/models/plant-cell.glb",
+    "sizeKB": 0,
+    "source": "Bio3D Procedural Model",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Procedural 3D plant cell cutaway model exported as GLB."
+  },
+
+  "camera": {
+    "position": [0, 0.3, 4.2],
+    "target": [0, 0, 0],
+    "minDistance": 1.6,
+    "maxDistance": 8
+  },
+
+  "parts": [
+    {
+      "id": "cell-wall",
+      "meshNames": ["part_cell-wall"],
+      "level": "basic",
+      "name": { "en": "Cell Wall" },
+      "short": { "en": "A strong, rigid outer wall made of cellulose that protects the plant cell and gives it a fixed shape." },
+      "detail": { "en": "A non-living, freely permeable rigid layer outside the plasma membrane. Composed mainly of cellulose microfibrils embedded in a pectin and hemicellulose matrix. Prevents osmotic bursting in hypotonic solutions." },
+      "anchor": [0, 0.85, 0],
+      "aliases": ["cellulose wall"]
+    },
+    {
+      "id": "cell-membrane",
+      "meshNames": ["part_cell-membrane"],
+      "level": "basic",
+      "name": { "en": "Cell Membrane" },
+      "short": { "en": "The thin living layer just inside the cell wall that controls what enters and exits." },
+      "detail": { "en": "A selectively permeable phospholipid bilayer pressed against the cell wall by turgor pressure. Regulates transport of water, mineral ions, and organic molecules." },
+      "anchor": [0, -0.73, 0.3],
+      "aliases": ["plasma membrane"]
+    },
+    {
+      "id": "cytoplasm",
+      "meshNames": ["part_cytoplasm"],
+      "level": "basic",
+      "name": { "en": "Cytoplasm" },
+      "short": { "en": "The jelly-like fluid filling the space between the membrane and organelles." },
+      "detail": { "en": "In mature plant cells, the cytoplasm is pushed into a thin peripheral layer around the large central vacuole. Exhibits cytoplasmic streaming (cyclosis) to distribute nutrients and organelles." },
+      "anchor": [0, -0.58, 0.4],
+      "aliases": ["cytosol"]
+    },
+    {
+      "id": "large-vacuole",
+      "meshNames": ["part_large-vacuole"],
+      "level": "basic",
+      "name": { "en": "Large Central Vacuole" },
+      "short": { "en": "A huge water-filled sac that keeps the plant firm and stores food and waste." },
+      "detail": { "en": "Can occupy up to 90% of a mature plant cell's volume. Bounded by a single selectively permeable membrane called the tonoplast. Maintains turgor pressure, stores cell sap, pigments (anthocyanins), and waste." },
+      "anchor": [0.24, 0.05, 0.3],
+      "aliases": ["central vacuole", "tonoplast"]
+    },
+    {
+      "id": "chloroplast",
+      "meshNames": ["part_chloroplast_1", "part_chloroplast_2", "part_chloroplast_3", "part_chloroplast_4"],
+      "level": "basic",
+      "name": { "en": "Chloroplasts" },
+      "short": { "en": "Green food factories that use sunlight to make sugar by photosynthesis." },
+      "detail": { "en": "Double-membraned plastids containing green chlorophyll pigment. Stacked thylakoid discs (grana) carry out light reactions, while the surrounding stroma performs the Calvin cycle. Contains circular DNA and 70S ribosomes." },
+      "anchor": [-0.60, -0.35, 0.35],
+      "aliases": ["plastid", "chlorophyll"]
+    },
+    {
+      "id": "nucleus",
+      "meshNames": ["part_nucleus"],
+      "level": "basic",
+      "name": { "en": "Nucleus" },
+      "short": { "en": "The control centre holding DNA, pushed to the side by the large vacuole." },
+      "detail": { "en": "Double-membraned organelle housing chromatin DNA. Unlike in animal cells, it typically sits near the cell periphery because the central vacuole fills the middle." },
+      "anchor": [-0.58, 0.22, 0.25],
+      "aliases": []
+    },
+    {
+      "id": "mitochondria",
+      "meshNames": ["part_mitochondria_1", "part_mitochondria_2"],
+      "level": "basic",
+      "name": { "en": "Mitochondria" },
+      "short": { "en": "Powerhouses that break down sugars made by photosynthesis to release usable energy." },
+      "detail": { "en": "Site of aerobic cellular respiration and ATP generation. Plant cells need mitochondria just like animal cells, especially at night or in non-green root cells." },
+      "anchor": [0.05, -0.44, 0.45],
+      "aliases": ["mitochondrion"]
+    },
+    {
+      "id": "endoplasmic-reticulum",
+      "meshNames": ["part_endoplasmic-reticulum"],
+      "level": "basic",
+      "name": { "en": "Endoplasmic Reticulum" },
+      "short": { "en": "A folded membrane network around the nucleus that builds and moves proteins and lipids." },
+      "detail": { "en": "Continuous with the outer nuclear envelope. Rough ER synthesises secretory/membrane proteins; Smooth ER produces lipids and connects through plasmodesmata as the desmotubule." },
+      "anchor": [-0.55, 0.12, 0.25],
+      "aliases": ["ER"]
+    },
+    {
+      "id": "golgi-apparatus",
+      "meshNames": ["part_golgi"],
+      "level": "basic",
+      "name": { "en": "Golgi Apparatus" },
+      "short": { "en": "Packages proteins and builds materials needed for the plant cell wall." },
+      "detail": { "en": "In plants, scattered stacks of cisternae (often called dictyosomes) synthesise non-cellulosic cell wall polysaccharides (pectins, hemicelluloses) and package proteins." },
+      "anchor": [-0.62, -0.15, -0.20],
+      "aliases": ["dictyosome"]
+    },
+    {
+      "id": "ribosomes",
+      "meshNames": ["part_ribosomes"],
+      "level": "basic",
+      "name": { "en": "Ribosomes" },
+      "short": { "en": "Tiny protein builders scattered in the cytoplasm and on the ER." },
+      "detail": { "en": "80S cytoplasmic ribosomes translate mRNA into proteins, while 70S ribosomes exist inside chloroplasts and mitochondria." },
+      "anchor": [-0.42, 0.40, 0.28],
+      "aliases": []
+    },
+    {
+      "id": "nucleolus",
+      "meshNames": ["part_nucleolus"],
+      "level": "neet",
+      "name": { "en": "Nucleolus" },
+      "short": { "en": "Dense region inside the nucleus that manufactures ribosomal RNA." },
+      "detail": { "en": "Non-membrane-bound body within the nucleoplasm where rRNA genes are transcribed and assembled with ribosomal proteins into 40S and 60S subunits." },
+      "anchor": [-0.55, 0.25, 0.20],
+      "aliases": []
+    },
+    {
+      "id": "plasmodesmata",
+      "meshNames": ["part_plasmodesmata"],
+      "level": "neet",
+      "name": { "en": "Plasmodesmata" },
+      "short": { "en": "Microscopic channels through the cell wall connecting neighbouring plant cells." },
+      "detail": { "en": "Cytoplasmic bridges traversing the cell wall and middle lamella. Allow direct symplastic transport of water, ions, small solutes, and signalling molecules between adjacent cells." },
+      "anchor": [1.02, 0.22, 0.15],
+      "aliases": ["symplast"]
+    },
+    {
+      "id": "amyloplast",
+      "meshNames": ["part_amyloplast"],
+      "level": "neet",
+      "name": { "en": "Amyloplast" },
+      "short": { "en": "A colourless plastid that stores starch grains inside plant cells." },
+      "detail": { "en": "Type of leucoplast lacking chlorophyll. Synthesises and stores starch granules (abundant in potato tubers and seeds); also acts as statoliths in root caps for gravitropism." },
+      "anchor": [0.68, -0.22, -0.20],
+      "aliases": ["leucoplast"]
+    },
+    {
+      "id": "peroxisome",
+      "meshNames": ["part_peroxisome"],
+      "level": "neet",
+      "name": { "en": "Peroxisome" },
+      "short": { "en": "Breaks down toxic peroxides and helps with photorespiration." },
+      "detail": { "en": "Single-membraned microbody containing catalase. Participates in the C₂ cycle (photorespiration) alongside chloroplasts and mitochondria in green leaf cells." },
+      "anchor": [-0.08, -0.25, 0.48],
+      "aliases": ["microbody"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "pq1",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which structure gives a plant cell its rigid box-like shape?" },
+      "options": [
+        { "en": "Cell membrane" },
+        { "en": "Cell wall" },
+        { "en": "Mitochondria" },
+        { "en": "Golgi apparatus" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "The cell wall is a strong outer layer made of cellulose that surrounds the cell membrane and maintains a firm, fixed shape." }
+    },
+    {
+      "id": "pq2",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the green organelle where photosynthesis happens." },
+      "answer": "chloroplast",
+      "explanation": { "en": "Chloroplasts contain chlorophyll, which traps sunlight to convert water and carbon dioxide into glucose." }
+    },
+    {
+      "id": "pq3",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the huge storage sac that keeps the plant cell firm and turgid." },
+      "answer": "large-vacuole",
+      "explanation": { "en": "The large central vacuole stores water and cell sap, pushing outwards against the cell wall to keep the plant upright." }
+    },
+    {
+      "id": "pq4",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "What is the membrane surrounding the large central vacuole called?" },
+      "options": [
+        { "en": "Plasma membrane" },
+        { "en": "Middle lamella" },
+        { "en": "Tonoplast" },
+        { "en": "Desmotubule" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "The tonoplast is the single, selectively permeable membrane enclosing the central vacuole, actively pumping ions into the cell sap." }
+    },
+    {
+      "id": "pq5",
+      "type": "tap-part",
+      "level": "neet",
+      "question": { "en": "Tap the microscopic channels that connect the cytoplasm of neighbouring plant cells." },
+      "answer": "plasmodesmata",
+      "explanation": { "en": "Plasmodesmata pierce the rigid cell walls so adjacent cells can share water, nutrients, and signals via the symplastic pathway." }
+    }
+  ]
+}
+

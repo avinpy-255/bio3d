@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "id": "animal-cell",
+      "title": { "en": "Animal Cell" },
+      "category": "cells",
+      "thumbnail": "/thumbs/animal-cell.svg",
+      "aliases": ["eukaryotic cell", "human cell", "cell"],
+      "keywords": ["cell", "nucleus", "membrane", "organelle", "mitochondria", "biology"],
+      "status": "published"
+    },
+    {
+      "id": "plant-cell",
+      "title": { "en": "Plant Cell" },
+      "category": "cells",
+      "thumbnail": "/thumbs/plant-cell.svg",
+      "aliases": ["eukaryotic plant cell", "chloroplast cell"],
+      "keywords": ["plant", "cell wall", "chloroplast", "vacuole", "photosynthesis", "plasmodesmata"],
+      "status": "published"
+    },
+    {
+      "id": "bacteria",
+      "title": { "en": "Bacteria (Prokaryotic Cell)" },
+      "category": "cells",
+      "thumbnail": "/thumbs/bacteria.svg",
+      "aliases": ["prokaryote", "bacillus", "microbe"],
+      "keywords": ["bacteria", "prokaryotic", "nucleoid", "flagellum", "plasmid", "pili", "capsule"],
+      "status": "published"
+    },
+    {
+      "id": "human-heart",
+      "title": { "en": "Human Heart" },
+      "category": "human-body",
+      "thumbnail": "/thumbs/human-heart.svg",
+      "aliases": ["heart", "cardiac", "circulatory system"],
+      "keywords": ["heart", "atrium", "ventricle", "aorta", "vena cava", "valves", "blood"],
+      "status": "published"
+    },
+    {
+      "id": "leaf",
+      "title": { "en": "Leaf Cross-Section" },
+      "category": "plants",
+      "thumbnail": "/thumbs/leaf.svg",
+      "aliases": ["leaf anatomy", "leaf structure"],
+      "keywords": ["leaf", "stomata", "palisade", "xylem", "phloem", "cuticle", "photosynthesis"],
+      "status": "published"
+    },
+    {
+      "id": "flower",
+      "title": { "en": "Complete Flower" },
+      "category": "plants",
+      "thumbnail": "/thumbs/flower.svg",
+      "aliases": ["angiosperm flower", "reproductive flower"],
+      "keywords": ["flower", "petal", "sepal", "stamen", "anther", "pistil", "ovary", "pollination"],
+      "status": "published"
+    },
+    {
+      "id": "fish",
+      "title": { "en": "Fish Anatomy" },
+      "category": "animals",
+      "thumbnail": "/thumbs/fish.svg",
+      "aliases": ["pisces", "bony fish", "animal body"],
+      "keywords": ["fish", "fins", "gills", "operculum", "swim bladder", "lateral line", "scales"],
+      "status": "published"
+    }
+  ]
+}

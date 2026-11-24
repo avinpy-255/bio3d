@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#1a1040"/>
+      <stop offset="100%" stop-color="#070a14"/>
+    </radialGradient>
+    <radialGradient id="membrane" cx="50%" cy="50%">
+      <stop offset="80%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Cell membrane -->
+  <ellipse cx="200" cy="150" rx="130" ry="110" fill="none" stroke="#93c5fd" stroke-width="2" stroke-opacity="0.4"/>
+  <!-- Cytoplasm fill -->
+  <ellipse cx="200" cy="150" rx="128" ry="108" fill="#86efac" fill-opacity="0.04"/>
+  <!-- Nucleus -->
+  <circle cx="200" cy="150" r="38" fill="#7c3aed" fill-opacity="0.9"/>
+  <!-- Nucleolus -->
+  <circle cx="204" cy="146" r="12" fill="#4c1d95"/>
+  <!-- Mitochondria 1 -->
+  <ellipse cx="275" cy="120" rx="20" ry="10" fill="#f97316" transform="rotate(-30,275,120)"/>
+  <!-- Mitochondria 2 -->
+  <ellipse cx="145" cy="175" rx="18" ry="9" fill="#f97316" transform="rotate(20,145,175)"/>
+  <!-- Golgi -->
+  <ellipse cx="260" cy="185" rx="22" ry="5" fill="#fbbf24" transform="rotate(-10,260,185)"/>
+  <ellipse cx="260" cy="193" rx="20" ry="5" fill="#fbbf24" transform="rotate(-10,260,193)"/>
+  <ellipse cx="260" cy="201" rx="18" ry="5" fill="#fbbf24" transform="rotate(-10,260,201)"/>
+  <!-- ER -->
+  <path d="M 165 130 Q 155 150 165 170" fill="none" stroke="#06b6d4" stroke-width="6" stroke-linecap="round"/>
+  <!-- Lysosomes -->
+  <circle cx="155" cy="225" r="9" fill="#ec4899"/>
+  <circle cx="175" cy="235" r="8" fill="#ec4899"/>
+  <!-- Vacuole -->
+  <circle cx="230" cy="115" r="16" fill="#67e8f9" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1"/>
+  <!-- Label -->
+  <text x="200" y="284" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748b">Animal Cell</text>
+</svg>
+

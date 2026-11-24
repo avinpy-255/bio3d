@@ -1,0 +1,19 @@
+# Dependencies & build output
+node_modules/
+dist/
+.vercel/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Archives & local scratch previews
+*.tar.gz
+cell_prev.png
+heart_prev (1).png
+part-anchors (1).json
+
+# OS & logs
+.DS_Store
+Thumbs.db
+*.log

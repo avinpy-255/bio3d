@@ -1,0 +1,185 @@
+{
+  "id": "bacteria",
+  "version": 1,
+  "title": { "en": "Bacteria (Prokaryotic Cell)" },
+  "category": "cells",
+
+  "model": {
+    "src": "/models/bacteria.glb",
+    "sizeKB": 0,
+    "source": "Bio3D Procedural Model",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Procedural 3D prokaryotic bacillus cell exported as GLB."
+  },
+
+  "camera": {
+    "position": [0, 0.2, 4.2],
+    "target": [-0.2, 0, 0],
+    "minDistance": 1.6,
+    "maxDistance": 8
+  },
+
+  "parts": [
+    {
+      "id": "capsule",
+      "meshNames": ["part_capsule"],
+      "level": "basic",
+      "name": { "en": "Capsule" },
+      "short": { "en": "A sticky outer coat that protects the bacterium from drying out and immune attacks." },
+      "detail": { "en": "Outermost polysaccharide glycocalyx layer (thick and tough when called a capsule, loose when called a slime layer). Helps pathogenic bacteria evade phagocytosis and adhere to surfaces." },
+      "anchor": [0.3, 0.58, 0],
+      "aliases": ["glycocalyx", "slime layer"]
+    },
+    {
+      "id": "cell-wall",
+      "meshNames": ["part_cell-wall"],
+      "level": "basic",
+      "name": { "en": "Cell Wall" },
+      "short": { "en": "A strong middle layer that gives the bacterium its shape and prevents bursting." },
+      "detail": { "en": "Made of peptidoglycan (murein) — sugar chains cross-linked by short peptides. Gram-positive bacteria have a thick peptidoglycan layer; Gram-negative bacteria have a thin layer plus an outer membrane." },
+      "anchor": [-0.1, 0.50, 0.2],
+      "aliases": ["peptidoglycan wall"]
+    },
+    {
+      "id": "plasma-membrane",
+      "meshNames": ["part_plasma-membrane"],
+      "level": "basic",
+      "name": { "en": "Plasma Membrane" },
+      "short": { "en": "A thin inner membrane that controls what enters and leaves the bacterial cell." },
+      "detail": { "en": "Selectively permeable phospholipid bilayer lacking sterols (unlike eukaryotes). Because bacteria lack mitochondria, respiratory electron transport enzymes sit right on this membrane." },
+      "anchor": [0.1, 0.44, 0.25],
+      "aliases": ["cell membrane"]
+    },
+    {
+      "id": "cytoplasm",
+      "meshNames": ["part_cytoplasm"],
+      "level": "basic",
+      "name": { "en": "Cytoplasm" },
+      "short": { "en": "The fluid inside the bacterium where all chemical reactions take place." },
+      "detail": { "en": "Contains water, enzymes, nutrients, and ribosomes, but lacks membrane-bound organelles (no mitochondria, ER, or Golgi)." },
+      "anchor": [0.35, -0.1, 0.25],
+      "aliases": ["cytosol"]
+    },
+    {
+      "id": "nucleoid",
+      "meshNames": ["part_nucleoid"],
+      "level": "basic",
+      "name": { "en": "Nucleoid (DNA)" },
+      "short": { "en": "The tangled loop of DNA floating freely — bacteria have no true nucleus." },
+      "detail": { "en": "A single, circular, double-stranded DNA molecule not enclosed by a nuclear membrane and lacking true histone proteins. Packed via supercoiling and nucleoid-associated proteins." },
+      "anchor": [-0.10, 0, 0.15],
+      "aliases": ["genomic DNA", "bacterial chromosome"]
+    },
+    {
+      "id": "ribosomes",
+      "meshNames": ["part_ribosomes"],
+      "level": "basic",
+      "name": { "en": "Ribosomes (70S)" },
+      "short": { "en": "Tiny granules that build proteins for the bacterial cell." },
+      "detail": { "en": "Prokaryotic ribosomes are smaller (70S = 50S + 30S subunits) than eukaryotic cytoplasmic ribosomes (80S). Many antibiotics (e.g. tetracycline, streptomycin) selectively block 70S ribosomes." },
+      "anchor": [0.25, -0.18, 0.25],
+      "aliases": ["70S ribosome"]
+    },
+    {
+      "id": "flagellum",
+      "meshNames": ["part_flagellum"],
+      "level": "basic",
+      "name": { "en": "Flagellum" },
+      "short": { "en": "A long spinning whip-like tail that propels the bacterium through liquids." },
+      "detail": { "en": "Composed of flagellin protein (three parts: filament, hook, and basal body). Unlike eukaryotic flagella, it rotates like a propeller powered by a proton motive force." },
+      "anchor": [-1.32, -0.14, 0],
+      "aliases": ["flagella"]
+    },
+    {
+      "id": "pili",
+      "meshNames": ["part_pili"],
+      "level": "basic",
+      "name": { "en": "Pili & Fimbriae" },
+      "short": { "en": "Short hair-like bristles that help bacteria stick to surfaces or share DNA." },
+      "detail": { "en": "Made of pilin protein. Fimbriae are short bristles for attachment to host tissues or rocks; sex pili are longer tubes used to transfer plasmid DNA during bacterial conjugation." },
+      "anchor": [0.30, 0.65, 0.05],
+      "aliases": ["fimbriae", "sex pilus"]
+    },
+    {
+      "id": "plasmid",
+      "meshNames": ["part_plasmid"],
+      "level": "neet",
+      "name": { "en": "Plasmid" },
+      "short": { "en": "A small extra ring of DNA that often carries antibiotic-resistance genes." },
+      "detail": { "en": "Small, circular, self-replicating extrachromosomal DNA molecules. Confer special traits such as antibiotic resistance or fertility (F-factor) and are widely used as cloning vectors in biotechnology." },
+      "anchor": [0.36, 0.14, 0.18],
+      "aliases": ["extrachromosomal DNA"]
+    },
+    {
+      "id": "mesosome",
+      "meshNames": ["part_mesosome"],
+      "level": "neet",
+      "name": { "en": "Mesosome" },
+      "short": { "en": "Inward fold of the plasma membrane that helps in cell wall formation and DNA replication." },
+      "detail": { "en": "Specialised membranous infoldings (vesicles, tubules, lamellae) of the plasma membrane. Aid in cell wall synthesis, DNA replication/distribution to daughter cells, respiration, and secretion." },
+      "anchor": [0.10, -0.34, 0.15],
+      "aliases": []
+    },
+    {
+      "id": "inclusion-bodies",
+      "meshNames": ["part_inclusion-bodies"],
+      "level": "neet",
+      "name": { "en": "Inclusion Bodies" },
+      "short": { "en": "Non-membrane storage granules holding reserve nutrients inside the cytoplasm." },
+      "detail": { "en": "Reserve materials stored in prokaryotic cytoplasm without a bounding membrane (e.g. phosphate granules, cyanophycean granules, glycogen granules, and gas vacuoles in aquatic bacteria)." },
+      "anchor": [-0.42, -0.10, 0.25],
+      "aliases": ["storage granules"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "bq1",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "How is bacterial DNA different from animal or plant cell DNA?" },
+      "options": [
+        { "en": "Bacteria have no DNA at all" },
+        { "en": "Bacterial DNA floats in the nucleoid with no nuclear membrane" },
+        { "en": "Bacterial DNA is stored inside mitochondria" },
+        { "en": "Bacterial DNA is enclosed inside a double nuclear envelope" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Bacteria are prokaryotes — they do not have a membrane-bound nucleus, so their circular DNA sits freely in a region called the nucleoid." }
+    },
+    {
+      "id": "bq2",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the long whip-like tail that helps the bacterium swim." },
+      "answer": "flagellum",
+      "explanation": { "en": "The bacterial flagellum rotates like a tiny propeller to push the cell through water or body fluids." }
+    },
+    {
+      "id": "bq3",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "What type of ribosomes are found in prokaryotic bacterial cells?" },
+      "options": [
+        { "en": "80S (60S + 40S)" },
+        { "en": "70S (50S + 30S)" },
+        { "en": "90S (60S + 30S)" },
+        { "en": "60S (40S + 20S)" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Prokaryotes possess 70S ribosomes composed of a 50S large subunit and a 30S small subunit." }
+    },
+    {
+      "id": "bq4",
+      "type": "tap-part",
+      "level": "neet",
+      "question": { "en": "Tap the small circular extra DNA ring often used as a vector in genetic engineering." },
+      "answer": "plasmid",
+      "explanation": { "en": "Plasmids replicate independently of the main bacterial chromosome and can carry genes such as antibiotic resistance." }
+    }
+  ]
+}
+

@@ -1,0 +1,175 @@
+{
+  "id": "leaf",
+  "version": 1,
+  "title": { "en": "Leaf Cross-Section" },
+  "category": "plants",
+
+  "model": {
+    "src": "/models/leaf.glb",
+    "sizeKB": 0,
+    "source": "Bio3D Procedural Model",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Procedural 3D leaf anatomy tissue cross-section exported as GLB."
+  },
+
+  "camera": {
+    "position": [0, 0.25, 3.8],
+    "target": [0, 0, 0],
+    "minDistance": 1.5,
+    "maxDistance": 7.5
+  },
+
+  "parts": [
+    {
+      "id": "cuticle",
+      "meshNames": ["part_cuticle"],
+      "level": "basic",
+      "name": { "en": "Waxy Cuticle" },
+      "short": { "en": "A thin waterproof waxy coating on top of the leaf that stops excess water loss." },
+      "detail": { "en": "Extracellular hydrophobic layer made of cutin secreted by epidermal cells. Allows sunlight to pass through while sharply reducing uncontrolled cuticular transpiration." },
+      "anchor": [0, 0.70, 0.2],
+      "aliases": []
+    },
+    {
+      "id": "upper-epidermis",
+      "meshNames": ["part_upper-epidermis"],
+      "level": "basic",
+      "name": { "en": "Upper Epidermis" },
+      "short": { "en": "A single transparent protective layer of tightly packed cells on the leaf's top surface." },
+      "detail": { "en": "Usually lacks chloroplasts (except guard cells) and stomata in most dicot leaves, letting light penetrate directly to the palisade layer beneath." },
+      "anchor": [0, 0.56, 0.45],
+      "aliases": []
+    },
+    {
+      "id": "palisade-mesophyll",
+      "meshNames": ["part_palisade-mesophyll"],
+      "level": "basic",
+      "name": { "en": "Palisade Mesophyll" },
+      "short": { "en": "Tall, tightly packed green cells packed with chloroplasts — the main site of photosynthesis." },
+      "detail": { "en": "Elongated columnar parenchyma cells arranged vertically beneath the upper epidermis. Rich in chloroplasts aligned along cell edges to maximise light absorption." },
+      "anchor": [0.27, 0.24, 0.42],
+      "aliases": ["palisade parenchyma"]
+    },
+    {
+      "id": "spongy-mesophyll",
+      "meshNames": ["part_spongy-mesophyll"],
+      "level": "basic",
+      "name": { "en": "Spongy Mesophyll" },
+      "short": { "en": "Loosely arranged green cells with gaps around them so gases can move easily." },
+      "detail": { "en": "Rounded/irregular chlorenchyma cells below the palisade layer with large intercellular air spaces connecting directly to the stomata for CO₂ and O₂ diffusion." },
+      "anchor": [0.42, -0.18, 0.36],
+      "aliases": ["spongy parenchyma"]
+    },
+    {
+      "id": "xylem",
+      "meshNames": ["part_xylem"],
+      "level": "basic",
+      "name": { "en": "Xylem (Vein)" },
+      "short": { "en": "Tubular vessels inside the leaf vein that bring water and minerals from the roots." },
+      "detail": { "en": "Located on the adaxial (upper) side of the vascular bundle in a leaf. Dead, lignified tracheids and vessels conduct water upward by transpiration pull." },
+      "anchor": [0, -0.02, 0.65],
+      "aliases": ["xylem vessels"]
+    },
+    {
+      "id": "phloem",
+      "meshNames": ["part_phloem"],
+      "level": "basic",
+      "name": { "en": "Phloem (Vein)" },
+      "short": { "en": "Living tubes inside the leaf vein that carry made food (sugars) to the rest of the plant." },
+      "detail": { "en": "Located on the abaxial (lower) side of the vascular bundle. Sieve tube elements and companion cells translocate sucrose bidirectionally via pressure-flow." },
+      "anchor": [0, -0.28, 0.65],
+      "aliases": ["sieve tubes"]
+    },
+    {
+      "id": "lower-epidermis",
+      "meshNames": ["part_lower-epidermis"],
+      "level": "basic",
+      "name": { "en": "Lower Epidermis" },
+      "short": { "en": "The protective bottom layer of the leaf, containing tiny openings called stomata." },
+      "detail": { "en": "Bears most stomata in dorsiventral (dicot) leaves so gas exchange occurs on the cooler, shaded underside, reducing water evaporation." },
+      "anchor": [0.56, -0.60, 0.44],
+      "aliases": []
+    },
+    {
+      "id": "stomata",
+      "meshNames": ["part_stomata"],
+      "level": "basic",
+      "name": { "en": "Stomata & Guard Cells" },
+      "short": { "en": "Tiny adjustable pores on the underside of the leaf for breathing (CO₂ in, O₂ & water vapour out)." },
+      "detail": { "en": "Each stoma is flanked by two kidney-shaped (dicot) or dumbbell-shaped (monocot) guard cells containing chloroplasts. Guard cells swell with K⁺ and water to open the pore in daylight." },
+      "anchor": [0, -0.62, 0.30],
+      "aliases": ["stoma", "guard cells"]
+    },
+    {
+      "id": "bundle-sheath",
+      "meshNames": ["part_bundle-sheath"],
+      "level": "neet",
+      "name": { "en": "Bundle Sheath" },
+      "short": { "en": "Protective ring of parenchyma cells wrapping around the leaf's xylem and phloem." },
+      "detail": { "en": "In C₄ plants (like maize and sugarcane), thick-walled bundle sheath cells form a wreath ('Kranz anatomy') around vascular bundles where RuBisCO performs the Calvin cycle." },
+      "anchor": [0, -0.15, 0.60],
+      "aliases": ["Kranz anatomy"]
+    },
+    {
+      "id": "air-spaces",
+      "meshNames": ["part_air-spaces"],
+      "level": "neet",
+      "name": { "en": "Intercellular Air Spaces" },
+      "short": { "en": "Open gas pockets in the spongy layer allowing rapid CO₂ diffusion to cells." },
+      "detail": { "en": "Substomatal cavities and intercellular air channels form a continuous gas phase inside the leaf so CO₂ entering via stomata reaches mesophyll surfaces quickly." },
+      "anchor": [-0.55, -0.28, 0.28],
+      "aliases": ["substomatal cavity"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "lq1",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the tall, tightly packed green cells where most photosynthesis takes place." },
+      "answer": "palisade-mesophyll",
+      "explanation": { "en": "Palisade mesophyll cells sit right under the clear upper epidermis and are packed with chloroplasts to capture maximum sunlight." }
+    },
+    {
+      "id": "lq2",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "What is the main job of the stomata and guard cells?" },
+      "options": [
+        { "en": "Anchor the leaf to the stem" },
+        { "en": "Let CO₂ in and O₂ / water vapour out" },
+        { "en": "Carry sugars from roots to leaves" },
+        { "en": "Make the waxy waterproof layer" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Stomata open and close using guard cells to allow carbon dioxide into the leaf for photosynthesis and release oxygen and water vapour." }
+    },
+    {
+      "id": "lq3",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the tubes in the leaf vein that bring water from the roots." },
+      "answer": "xylem",
+      "explanation": { "en": "Xylem sits on the upper side of the leaf vein and delivers water and dissolved minerals from the roots." }
+    },
+    {
+      "id": "lq4",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "In C₄ plants exhibiting Kranz anatomy, which structure forms a concentric ring around the vascular bundle?" },
+      "options": [
+        { "en": "Cuticle" },
+        { "en": "Lower epidermis" },
+        { "en": "Bundle sheath" },
+        { "en": "Guard cells" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "Large, agranal-chloroplast-rich bundle sheath cells surround the vascular bundles in Kranz anatomy to concentrate CO₂ around RuBisCO and minimise photorespiration." }
+    }
+  ]
+}
+

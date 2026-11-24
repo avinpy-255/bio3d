@@ -1,0 +1,213 @@
+{
+  "id": "flower",
+  "version": 1,
+  "title": { "en": "Complete Flower" },
+  "category": "plants",
+
+  "model": {
+    "src": "/models/flower.glb",
+    "sizeKB": 0,
+    "source": "Bio3D Procedural Model",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Procedural 3D complete bisexual flower model exported as GLB."
+  },
+
+  "camera": {
+    "position": [0, 0.35, 3.6],
+    "target": [0, -0.05, 0],
+    "minDistance": 1.5,
+    "maxDistance": 7.5
+  },
+
+  "parts": [
+    {
+      "id": "petals",
+      "meshNames": ["part_petals"],
+      "level": "basic",
+      "name": { "en": "Petals (Corolla)" },
+      "short": { "en": "Brightly coloured leaf-like parts that attract bees, butterflies, and birds for pollination." },
+      "detail": { "en": "Collectively form the corolla (second floral whorl). Bright colours and scents attract biotic pollinators; they also shield inner reproductive whorls in the bud." },
+      "anchor": [0.56, -0.05, 0.1],
+      "aliases": ["corolla"]
+    },
+    {
+      "id": "sepals",
+      "meshNames": ["part_sepals"],
+      "level": "basic",
+      "name": { "en": "Sepals (Calyx)" },
+      "short": { "en": "Green leaf-like parts under the petals that protect the flower while it is still a bud." },
+      "detail": { "en": "Outermost floral whorl (calyx). Usually green and photosynthetic, enclosing and protecting the unopened flower bud." },
+      "anchor": [0.34, -0.40, 0.25],
+      "aliases": ["calyx"]
+    },
+    {
+      "id": "stamen",
+      "meshNames": ["part_anther", "part_filament"],
+      "level": "basic",
+      "name": { "en": "Stamen (Male Part)" },
+      "short": { "en": "The male part of the flower made of a stalk (filament) and a pollen-making head (anther)." },
+      "detail": { "en": "Collectively form the androecium. Consists of a slender filament supporting a bilobed anther that produces pollen grains (male gametophytes). In NEET mode, filament and anther are shown separately." },
+      "anchor": [0.35, 0.30, 0.1],
+      "aliases": ["androecium"]
+    },
+    {
+      "id": "pistil",
+      "meshNames": ["part_stigma", "part_style", "part_ovary"],
+      "level": "basic",
+      "name": { "en": "Pistil / Carpel (Female Part)" },
+      "short": { "en": "The central female part with a sticky top (stigma), tube (style), and swollen base (ovary)." },
+      "detail": { "en": "Collectively form the gynoecium. Consists of stigma (receives pollen), style (conducts pollen tube), and ovary (contains ovules). After fertilisation, the ovary becomes the fruit." },
+      "anchor": [0, 0.50, 0.1],
+      "aliases": ["carpel", "gynoecium"]
+    },
+    {
+      "id": "ovules",
+      "meshNames": ["part_ovules"],
+      "level": "basic",
+      "name": { "en": "Ovules" },
+      "short": { "en": "Tiny egg-holding structures inside the ovary that turn into seeds after fertilisation." },
+      "detail": { "en": "Megasporangia attached to the placenta inside the ovary. Each ovule contains the embryo sac (female gametophyte) with the egg cell and central cell; develops into a seed post-fertilisation." },
+      "anchor": [0.06, -0.18, 0.12],
+      "aliases": ["future seeds"]
+    },
+    {
+      "id": "receptacle",
+      "meshNames": ["part_receptacle"],
+      "level": "basic",
+      "name": { "en": "Receptacle (Thalamus)" },
+      "short": { "en": "The swollen top of the flower stalk that holds all the parts of the flower together." },
+      "detail": { "en": "Condensed floral axis (thalamus/torus) bearing the four floral whorls (calyx, corolla, androecium, gynoecium) at closely spaced nodes." },
+      "anchor": [0, -0.44, 0.25],
+      "aliases": ["thalamus"]
+    },
+    {
+      "id": "pedicel",
+      "meshNames": ["part_pedicel"],
+      "level": "basic",
+      "name": { "en": "Pedicel (Flower Stalk)" },
+      "short": { "en": "The green stem that supports the flower and connects it to the plant branch." },
+      "detail": { "en": "Stalk of an individual flower containing vascular bundles that supply water, minerals, and sugars to developing floral organs and fruits." },
+      "anchor": [0, -0.82, 0.1],
+      "aliases": ["stalk"]
+    },
+    {
+      "id": "anther",
+      "meshNames": ["part_anther"],
+      "level": "neet",
+      "name": { "en": "Anther" },
+      "short": { "en": "Pollen-producing sac at the tip of the stamen." },
+      "detail": { "en": "Typically bilobed and dithecous (four microsporangia). Inside, pollen mother cells undergo meiosis to form haploid microspores (pollen grains), nourished by the tapetum." },
+      "anchor": [0.35, 0.38, 0.1],
+      "aliases": ["microsporangium"]
+    },
+    {
+      "id": "filament",
+      "meshNames": ["part_filament"],
+      "level": "neet",
+      "name": { "en": "Filament" },
+      "short": { "en": "Slender stalk holding the anther up to release pollen." },
+      "detail": { "en": "Long, slender sterile stalk whose proximal end attaches to the thalamus or petal (epipetalous) and whose distal end supports the anther." },
+      "anchor": [0.28, 0.08, 0.1],
+      "aliases": []
+    },
+    {
+      "id": "stigma",
+      "meshNames": ["part_stigma"],
+      "level": "neet",
+      "name": { "en": "Stigma" },
+      "short": { "en": "Sticky landing platform at the top of the pistil that catches pollen." },
+      "detail": { "en": "Receptive tip of the carpel. Recognises compatible pollen grains via chemical pollen-pistil interaction and stimulates pollen germination." },
+      "anchor": [0, 0.58, 0.12],
+      "aliases": []
+    },
+    {
+      "id": "style",
+      "meshNames": ["part_style"],
+      "level": "neet",
+      "name": { "en": "Style" },
+      "short": { "en": "Slender neck connecting the stigma down to the ovary." },
+      "detail": { "en": "Elongated hollow or solid tissue column beneath the stigma through which the pollen tube grows downward toward the ovules." },
+      "anchor": [0, 0.25, 0.08],
+      "aliases": []
+    },
+    {
+      "id": "ovary",
+      "meshNames": ["part_ovary"],
+      "level": "neet",
+      "name": { "en": "Ovary" },
+      "short": { "en": "Enlarged hollow base of the pistil enclosing the ovules; ripens into the fruit." },
+      "detail": { "en": "Basal swollen region of the pistil housing one or more locules (ovarian cavities) with ovules attached to the placenta. Post-fertilisation, the ovary wall becomes the pericarp (fruit)." },
+      "anchor": [0, -0.20, 0.22],
+      "aliases": []
+    },
+    {
+      "id": "nectary",
+      "meshNames": ["part_nectary"],
+      "level": "neet",
+      "name": { "en": "Nectary" },
+      "short": { "en": "Sweet sugar-secreting glands at the flower base that reward insect pollinators." },
+      "detail": { "en": "Secretory glands located near the petal/receptacle base producing sugary nectar as a reward to ensure cross-pollination (entomophily / ornithophily)." },
+      "anchor": [0.22, -0.32, 0.1],
+      "aliases": ["nectar gland"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "fq1",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the brightly coloured parts that attract insects to the flower." },
+      "answer": "petals",
+      "explanation": { "en": "Petals (the corolla) use bright colours and pleasant scents to guide bees and butterflies to the flower." }
+    },
+    {
+      "id": "fq2",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which part of a flower grows into seeds after fertilisation?" },
+      "options": [
+        { "en": "Sepals" },
+        { "en": "Petals" },
+        { "en": "Ovules" },
+        { "en": "Filament" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "Ovules inside the ovary develop into seeds, while the surrounding ovary ripens into the fruit." }
+    },
+    {
+      "id": "fq3",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the green outer flaps that protect the flower while it is a bud." },
+      "answer": "sepals",
+      "explanation": { "en": "Sepals form the calyx around the outside of the flower bud to keep it safe before blooming." }
+    },
+    {
+      "id": "fq4",
+      "type": "tap-part",
+      "level": "neet",
+      "question": { "en": "Tap the bilobed pollen-producing structure where microsporogenesis occurs." },
+      "answer": "anther",
+      "explanation": { "en": "The anther contains microsporangia where pollen mother cells divide by meiosis to form pollen grains." }
+    },
+    {
+      "id": "fq5",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "Which tissue inside a dithecous anther nourishes the developing pollen grains?" },
+      "options": [
+        { "en": "Thalamus" },
+        { "en": "Tapetum" },
+        { "en": "Calyx" },
+        { "en": "Pedicel" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "The tapetum is the innermost layer of the microsporangium wall; its dense, multinucleate cells nourish developing pollen grains." }
+    }
+  ]
+}
+

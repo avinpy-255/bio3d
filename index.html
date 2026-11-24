@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore biology in 3D — free interactive models of cells, plants, and the human body for students from class 1 to NEET." />
+  <title>Bio3D — Interactive 3D Biology Learning</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Bio3D home">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Bio<strong>3D</strong></span>
+      </a>
+      <div class="header-controls">
+        <div id="level-toggle-home" class="level-toggle" role="group" aria-label="Learning level">
+          <button class="level-btn active" data-level="basic">Simple</button>
+          <button class="level-btn" data-level="neet">NEET</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Explore Biology<br><span class="hero-accent">in 3D</span></h1>
+      <p class="hero-sub">Rotate, tap, and learn — free for every student.</p>
+      <div class="search-wrap">
+        <label for="search" class="sr-only">Search topics</label>
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input id="search" class="search-input" type="search" placeholder="Search topics — cell, heart, leaf…" autocomplete="off" />
+      </div>
+      <div id="search-results" class="search-results" hidden aria-live="polite"></div>
+    </section>
+
+    <section class="categories" aria-label="Browse categories">
+      <h2 class="section-title">Browse by Category</h2>
+      <div class="category-grid">
+        <a href="/category.html?c=cells" class="category-card" style="--card-color:#a78bfa">
+          <span class="card-emoji" aria-hidden="true">🔬</span>
+          <h3>Cells</h3>
+          <p>Animal cell, plant cell, bacteria, and more</p>
+        </a>
+        <a href="/category.html?c=plants" class="category-card" style="--card-color:#4ade80">
+          <span class="card-emoji" aria-hidden="true">🌿</span>
+          <h3>Plants</h3>
+          <p>Leaf, flower, root, seed, and plant systems</p>
+        </a>
+        <a href="/category.html?c=animals" class="category-card" style="--card-color:#fb923c">
+          <span class="card-emoji" aria-hidden="true">🦎</span>
+          <h3>Animals</h3>
+          <p>Body parts and organ systems</p>
+        </a>
+        <a href="/category.html?c=human-body" class="category-card" style="--card-color:#38bdf8">
+          <span class="card-emoji" aria-hidden="true">🫀</span>
+          <h3>Human Body</h3>
+          <p>Heart, lungs, brain, kidney, and more</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="featured" aria-label="Available topics">
+      <h2 class="section-title">Available Now</h2>
+      <div id="topic-grid" class="topic-grid">
+        <div class="topic-card-skeleton"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>🧬 Bio3D — Free for every student</span>
+      <a href="/about.html">Credits &amp; Licences</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main-home.js"></script>
+</body>
+</html>
+

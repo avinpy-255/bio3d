@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Bio3D</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Bio3D home">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Bio<strong>3D</strong></span>
+      </a>
+      <a href="/" class="btn-ghost">← Home</a>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <h1>About &amp; Credits</h1>
+
+    <section>
+      <h2>What is Bio3D?</h2>
+      <p>Bio3D is a free, interactive 3D biology learning website for students from class 1 to NEET. Every part of this site is built with open-source, free tools and free hosting. There is no login, no ads, no tracking.</p>
+    </section>
+
+    <section>
+      <h2>Open Questions (decisions pending)</h2>
+      <ul>
+        <li><strong>Site name / domain</strong> — to be confirmed before Cloudflare custom domain setup.</li>
+        <li><strong>Code licence</strong> — MIT recommended; pending project owner confirmation.</li>
+        <li><strong>Content licence</strong> — CC BY-SA 4.0 recommended; pending confirmation.</li>
+        <li><strong>Biology accuracy reviewer</strong> — a subject teacher or expert is recommended before publishing each topic.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tools Used</h2>
+      <ul>
+        <li><a href="https://threejs.org/" target="_blank" rel="noopener">Three.js</a> — 3D rendering (MIT licence)</li>
+        <li><a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> — build tool (MIT licence)</li>
+        <li><a href="https://gltf-transform.donmccurdy.com/" target="_blank" rel="noopener">glTF-Transform</a> — model optimisation (MIT licence)</li>
+        <li><a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Pages</a> — free hosting</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3D Model Credits</h2>
+      <div id="model-credits">
+        <p>Loading credits…</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Content Sources</h2>
+      <ul>
+        <li>NCERT Biology Textbooks (Class 6–12) — used for accuracy checks only; all explanations are written independently.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Future Plans</h2>
+      <ul>
+        <li>Hindi and regional language support</li>
+        <li>Voice explanations (Web Speech API, free)</li>
+        <li>Offline / PWA support</li>
+        <li>Teacher mode with shareable quiz links</li>
+        <li>Draw-and-compare mode</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>🧬 Bio3D — Free for every student</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main-about.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,248 @@
+{
+  "id": "animal-cell",
+  "version": 2,
+  "title": { "en": "Animal Cell" },
+  "category": "cells",
+
+  "model": {
+    "src": "/models/animal-cell.glb",
+    "sizeKB": 890,
+    "source": "Bio3D Model Generator (tools/build_cell.py)",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "High-detail GLB with cutaway cristae mitochondria, ribosome-studded rough ER, branching smooth ER, stacked Golgi cisternae, centriole barrels, and translucent nuclear envelope."
+  },
+
+  "camera": {
+    "position": [0, 0.1, 3.6],
+    "target": [0, 0, 0],
+    "minDistance": 1.4,
+    "maxDistance": 7.5
+  },
+
+  "parts": [
+    {
+      "id": "cell-membrane",
+      "meshNames": ["part_membrane"],
+      "level": "basic",
+      "name": { "en": "Cell Membrane" },
+      "short": { "en": "A thin, flexible layer that surrounds the cell and controls what enters and leaves." },
+      "detail": { "en": "A phospholipid bilayer with embedded proteins. Selectively permeable: allows water and small molecules to pass by osmosis and diffusion, while larger or charged molecules require protein channels or active transport." },
+      "anchor": [0.88, 0.42, 0],
+      "aliases": ["plasma membrane", "plasmalemma"]
+    },
+    {
+      "id": "nucleus",
+      "meshNames": ["part_nucleus"],
+      "level": "basic",
+      "name": { "en": "Nucleus" },
+      "short": { "en": "The control centre of the cell. It holds the DNA (chromatin) and directs all cell activities." },
+      "detail": { "en": "Enclosed by a double-layered nuclear envelope perforated by nuclear pores. Contains chromatin (DNA + histone proteins) and a dense nucleolus that produces rRNA. Directs protein synthesis via mRNA transcription." },
+      "anchor": [-0.08, 0.038, 0.28],
+      "aliases": ["cell nucleus", "chromatin"]
+    },
+    {
+      "id": "mitochondria",
+      "meshNames": ["part_mitochondria_1", "part_mitochondria_2", "part_mitochondria_3", "part_mitochondria_4", "part_mitochondria_5"],
+      "level": "basic",
+      "name": { "en": "Mitochondria" },
+      "short": { "en": "The powerhouse of the cell. It converts food into energy (ATP) the cell can use." },
+      "detail": { "en": "Double-membraned organelle with an inner membrane folded into cristae (visible inside the cutaway) to increase surface area for ATP synthesis. Contains its own circular DNA and 70S ribosomes." },
+      "anchor": [0.576, 0.337, -0.212],
+      "aliases": ["mitochondrion", "powerhouse"]
+    },
+    {
+      "id": "endoplasmic-reticulum",
+      "meshNames": ["part_er_rough", "part_er_smooth"],
+      "level": "basic",
+      "name": { "en": "Endoplasmic Reticulum" },
+      "short": { "en": "A network of folded membranes and tubules that makes and transports proteins and fats." },
+      "detail": { "en": "Rough ER (studded with ribosomes) folds and processes proteins destined for secretion or the membrane. Smooth ER (branching tubules without ribosomes) synthesises lipids and detoxifies drugs. Shown separately in NEET mode." },
+      "anchor": [-0.25, 0.05, 0.38],
+      "aliases": ["ER"]
+    },
+    {
+      "id": "golgi-apparatus",
+      "meshNames": ["part_golgi"],
+      "level": "basic",
+      "name": { "en": "Golgi Apparatus" },
+      "short": { "en": "The cell's post office. It packages and ships proteins in vesicles to where they are needed." },
+      "detail": { "en": "A stack of curved, flattened membrane sacs (cisternae) with budding transport vesicles. Modifies and sorts proteins (glycosylation, phosphorylation) from the ER and dispatches them to lysosomes or the membrane." },
+      "anchor": [0.415, -0.249, 0.25],
+      "aliases": ["Golgi body", "Golgi complex"]
+    },
+    {
+      "id": "ribosomes",
+      "meshNames": ["part_ribosomes"],
+      "level": "basic",
+      "name": { "en": "Ribosomes" },
+      "short": { "en": "Tiny structures that build proteins by reading the cell's mRNA instructions." },
+      "detail": { "en": "Non-membrane-bound particles made of rRNA and protein. Found both attached to the Rough ER (making secretory/membrane proteins) and free in the cytoplasm (80S in eukaryotes)." },
+      "anchor": [0.22, -0.35, 0.55],
+      "aliases": ["80S ribosome"]
+    },
+    {
+      "id": "lysosomes",
+      "meshNames": ["part_lysosome_1", "part_lysosome_2", "part_lysosome_3", "part_lysosome_4"],
+      "level": "basic",
+      "name": { "en": "Lysosomes" },
+      "short": { "en": "The cell's recycling bins. They break down waste and old or damaged parts." },
+      "detail": { "en": "Single-membrane vesicles containing hydrolytic enzymes active at acidic pH (~5). Digest worn-out organelles (autophagy) and engulfed pathogens (phagocytosis); sometimes called 'suicide bags'." },
+      "anchor": [0.176, 0.614, 0.384],
+      "aliases": ["lysosome", "suicide bags"]
+    },
+    {
+      "id": "centrosome",
+      "meshNames": ["part_centrioles"],
+      "level": "basic",
+      "name": { "en": "Centrosome (Centrioles)" },
+      "short": { "en": "Organises the cell's microtubule skeleton and helps pull chromosomes apart during cell division." },
+      "detail": { "en": "Contains two perpendicular centriole barrels surrounded by pericentriolar material. Duplicates before mitosis so each copy moves to an opposite pole to form the mitotic spindle." },
+      "anchor": [0.296, 0.528, 0.25],
+      "aliases": ["centriole"]
+    },
+    {
+      "id": "nucleolus",
+      "meshNames": ["part_nucleolus"],
+      "level": "neet",
+      "name": { "en": "Nucleolus" },
+      "short": { "en": "A dense spherical region inside the nucleus that produces ribosomal RNA." },
+      "detail": { "en": "Non-membrane-bound phase-separated condensate inside the nucleus. Transcribes rDNA into pre-rRNA and assembles 40S and 60S ribosomal subunits before exporting them through nuclear pores." },
+      "anchor": [-0.021, 0.079, 0.14],
+      "aliases": []
+    },
+    {
+      "id": "nuclear-envelope",
+      "meshNames": ["part_nuclear_envelope"],
+      "level": "neet",
+      "name": { "en": "Nuclear Envelope" },
+      "short": { "en": "A double membrane perforated with nuclear pores that surrounds and protects the nucleus." },
+      "detail": { "en": "Two phospholipid bilayers (outer membrane continuous with the Rough ER) studded with ~120 MDa nuclear pore complexes (NPCs) that selectively gate RNA export and protein import." },
+      "anchor": [-0.082, 0.32, 0.12],
+      "aliases": ["nuclear membrane", "nuclear pores"]
+    },
+    {
+      "id": "er-rough",
+      "meshNames": ["part_er_rough"],
+      "level": "neet",
+      "name": { "en": "Rough Endoplasmic Reticulum" },
+      "short": { "en": "Ribosome-studded membrane sheets wrapped around the nucleus that fold secretory proteins." },
+      "detail": { "en": "Continuous with the outer nuclear envelope. 80S ribosomes bound via ribophorins co-translationally insert nascent polypeptides into its lumen for folding and N-linked glycosylation." },
+      "anchor": [-0.28, 0.06, 0.38],
+      "aliases": ["RER"]
+    },
+    {
+      "id": "er-smooth",
+      "meshNames": ["part_er_smooth"],
+      "level": "neet",
+      "name": { "en": "Smooth Endoplasmic Reticulum" },
+      "short": { "en": "Tubular ER lacking ribosomes; synthesises lipids, steroid hormones, and detoxifies drugs." },
+      "detail": { "en": "Lacks ribosomes. Major site of phospholipid and steroid synthesis; uses cytochrome P450 enzymes in liver cells to detoxify xenobiotics and sequesters Ca²⁺ ions." },
+      "anchor": [-0.15, -0.32, 0.42],
+      "aliases": ["SER"]
+    },
+    {
+      "id": "centrioles",
+      "meshNames": ["part_centrioles"],
+      "level": "neet",
+      "name": { "en": "Centrioles (9+0)" },
+      "short": { "en": "Paired cylinders of 9 microtubule triplets at right angles organising spindle fibres." },
+      "detail": { "en": "Each centriole barrel has nine peripheral triplet microtubules and no central singlet (9+0 arrangement), unlike cilia/flagella (9+2). Also serves as the basal body for cilia and flagella." },
+      "anchor": [0.296, 0.528, 0.25],
+      "aliases": []
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which part of the animal cell is called the 'powerhouse'?" },
+      "options": [
+        { "en": "Nucleus" },
+        { "en": "Mitochondria" },
+        { "en": "Golgi apparatus" },
+        { "en": "Ribosome" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Mitochondria produce ATP (energy) through cellular respiration across their folded inner cristae." }
+    },
+    {
+      "id": "q2",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the part that controls everything the cell does." },
+      "answer": "nucleus",
+      "explanation": { "en": "The nucleus holds the cell's DNA — the instruction manual directing protein synthesis, growth, and division." }
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "What does the cell membrane do?" },
+      "options": [
+        { "en": "Makes energy for the cell" },
+        { "en": "Controls what enters and leaves the cell" },
+        { "en": "Builds proteins for the cell" },
+        { "en": "Stores the cell's DNA" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "The cell membrane is a selectively permeable barrier letting nutrients in and pushing waste out." }
+    },
+    {
+      "id": "q4",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the cell's 'post office' — the stacked sacs that package and ship proteins." },
+      "answer": "golgi-apparatus",
+      "explanation": { "en": "The Golgi apparatus receives proteins from the ER, modifies them, and dispatches them in tiny vesicles." }
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which organelle breaks down old and damaged parts of the cell?" },
+      "options": [
+        { "en": "Mitochondria" },
+        { "en": "Ribosomes" },
+        { "en": "Lysosomes" },
+        { "en": "Centrosome" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "Lysosomes are the cell's recycling bins filled with digestive hydrolytic enzymes." }
+    },
+    {
+      "id": "q6",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap one of the orange bean-shaped powerhouses with folded cristae inside." },
+      "answer": "mitochondria",
+      "explanation": { "en": "Mitochondria generate ATP energy for the cell; their folded inner cristae maximise surface area for respiration." }
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "Which microtubule arrangement is found in a centriole?" },
+      "options": [
+        { "en": "9 + 2 doublets" },
+        { "en": "9 + 0 triplets" },
+        { "en": "9 + 2 singlets" },
+        { "en": "7 + 0 doublets" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Centrioles exhibit a cartwheel 9 + 0 arrangement of 9 peripheral microtubule triplets and no central microtubules." }
+    },
+    {
+      "id": "q8",
+      "type": "tap-part",
+      "level": "neet",
+      "question": { "en": "Tap the dense core inside the nucleus where ribosomal RNA (rRNA) is synthesised." },
+      "answer": "nucleolus",
+      "explanation": { "en": "The nucleolus is a non-membrane-bound body inside the nucleus dedicated to rRNA transcription and ribosome assembly." }
+    }
+  ]
+}

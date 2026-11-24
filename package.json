@@ -1,0 +1,22 @@
+{
+  "name": "bio3d",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-content.mjs",
+    "export-models": "node scripts/export-models.mjs",
+    "vercel-build": "node scripts/export-models.mjs && (python3 -c 'import numpy' 2>/dev/null || python3 -m pip install --quiet numpy 2>/dev/null || python3 -m pip install --quiet --break-system-packages numpy) && python3 tools/build_cell.py public/models/animal-cell.glb && python3 tools/build_heart.py public/models/human-heart.glb && vite build"
+  },
+  "dependencies": {
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "@gltf-transform/core": "^4.0.0"
+  }
+}
+

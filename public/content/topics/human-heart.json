@@ -1,0 +1,192 @@
+{
+  "id": "human-heart",
+  "version": 2,
+  "title": { "en": "Human Heart" },
+  "category": "human-body",
+
+  "model": {
+    "src": "/models/human-heart.glb",
+    "sizeKB": 903,
+    "source": "Bio3D Model Generator (tools/build_heart.py)",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Anatomical GLB with 4 chambers, auricles, aortic arch with 3 branches, pulmonary trunk, superior/inferior vena cava, pulmonary veins, and surface coronary arteries."
+  },
+
+  "camera": {
+    "position": [0, 0.05, 3.3],
+    "target": [0, 0, 0],
+    "minDistance": 1.4,
+    "maxDistance": 7.0
+  },
+
+  "parts": [
+    {
+      "id": "right-atrium",
+      "meshNames": ["part_right-atrium"],
+      "level": "basic",
+      "name": { "en": "Right Atrium" },
+      "short": { "en": "Upper right chamber that receives oxygen-poor blood returning from the body via the vena cava." },
+      "detail": { "en": "Receives deoxygenated blood from the superior vena cava, inferior vena cava, and coronary sinus, then pushes it through the tricuspid valve into the right ventricle. Houses the SA node." },
+      "anchor": [-0.372, 0.046, 0.25],
+      "aliases": ["right auricle"]
+    },
+    {
+      "id": "left-atrium",
+      "meshNames": ["part_left-atrium"],
+      "level": "basic",
+      "name": { "en": "Left Atrium" },
+      "short": { "en": "Upper left chamber that receives fresh oxygen-rich blood arriving from the lungs." },
+      "detail": { "en": "Receives oxygenated blood through four pulmonary veins from the left and right lungs and passes it through the bicuspid (mitral) valve into the left ventricle." },
+      "anchor": [0.209, 0.144, 0.20],
+      "aliases": ["left auricle"]
+    },
+    {
+      "id": "right-ventricle",
+      "meshNames": ["part_right-ventricle"],
+      "level": "basic",
+      "name": { "en": "Right Ventricle" },
+      "short": { "en": "Lower right chamber that pumps oxygen-poor blood up through the pulmonary artery to the lungs." },
+      "detail": { "en": "Has a thinner muscular wall than the left ventricle because it pumps blood at lower pressure across the short pulmonary circuit to the lungs." },
+      "anchor": [-0.184, -0.297, 0.35],
+      "aliases": []
+    },
+    {
+      "id": "left-ventricle",
+      "meshNames": ["part_left-ventricle"],
+      "level": "basic",
+      "name": { "en": "Left Ventricle" },
+      "short": { "en": "Lower left chamber — the strongest chamber, forming the heart's apex and pumping blood to the whole body." },
+      "detail": { "en": "Possesses the thickest myocardium (~3× thicker than the right ventricle) to generate high systemic pressure (~120 mmHg) driving blood through the aorta to every organ." },
+      "anchor": [0.15, -0.343, 0.30],
+      "aliases": ["apex"]
+    },
+    {
+      "id": "aorta",
+      "meshNames": ["part_aorta"],
+      "level": "basic",
+      "name": { "en": "Aorta" },
+      "short": { "en": "The body's largest artery — arches upward from the left ventricle to carry oxygen-rich blood to all organs." },
+      "detail": { "en": "Elastic artery arising from the left ventricle. Its arch gives off three major branches (brachiocephalic, left common carotid, left subclavian) supplying the head and arms before descending." },
+      "anchor": [0.221, 0.56, 0.08],
+      "aliases": ["aortic arch"]
+    },
+    {
+      "id": "vena-cava",
+      "meshNames": ["part_superior-vena-cava", "part_inferior-vena-cava"],
+      "level": "basic",
+      "name": { "en": "Vena Cava" },
+      "short": { "en": "Two large blue veins (superior and inferior) bringing used, oxygen-poor blood back into the right atrium." },
+      "detail": { "en": "The superior vena cava drains blood from the head, neck, and arms; the inferior vena cava drains the abdomen and legs. Listed separately in NEET mode." },
+      "anchor": [-0.404, 0.513, 0.10],
+      "aliases": ["great veins"]
+    },
+    {
+      "id": "pulmonary-artery",
+      "meshNames": ["part_pulmonary-artery"],
+      "level": "basic",
+      "name": { "en": "Pulmonary Artery" },
+      "short": { "en": "Branches left and right to carry oxygen-poor blood from the right ventricle to both lungs." },
+      "detail": { "en": "The only artery in the adult body carrying deoxygenated blood. Arises as the pulmonary trunk from the right ventricle and bifurcates beneath the aortic arch." },
+      "anchor": [0.05, 0.32, 0.30],
+      "aliases": ["pulmonary trunk"]
+    },
+    {
+      "id": "pulmonary-veins",
+      "meshNames": ["part_pulmonary-veins"],
+      "level": "basic",
+      "name": { "en": "Pulmonary Veins" },
+      "short": { "en": "Four vessels at the back that bring fresh, oxygen-rich blood from the lungs into the left atrium." },
+      "detail": { "en": "The only veins in the adult body carrying oxygenated blood (two from the left lung, two from the right lung, entering the posterior left atrium)." },
+      "anchor": [0.236, 0.189, -0.30],
+      "aliases": ["pulmonary vein"]
+    },
+    {
+      "id": "coronary-arteries",
+      "meshNames": ["part_coronary-arteries"],
+      "level": "basic",
+      "name": { "en": "Coronary Arteries" },
+      "short": { "en": "Blood vessels hugging the outside of the heart muscle to feed the heart itself with oxygen." },
+      "detail": { "en": "Branch directly from the base of the aorta (above the aortic semilunar valve) to supply oxygenated blood to the myocardium. Blockage of these vessels causes myocardial infarction (heart attack)." },
+      "anchor": [-0.002, -0.24, 0.36],
+      "aliases": ["coronary circulation"]
+    },
+    {
+      "id": "superior-vena-cava",
+      "meshNames": ["part_superior-vena-cava"],
+      "level": "neet",
+      "name": { "en": "Superior Vena Cava (SVC)" },
+      "short": { "en": "Large upper vein draining deoxygenated blood from the head, neck, and upper limbs." },
+      "detail": { "en": "Formed by the union of the left and right brachiocephalic veins; enters the superior aspect of the right atrium without a valve." },
+      "anchor": [-0.404, 0.513, 0.12],
+      "aliases": ["precaval"]
+    },
+    {
+      "id": "inferior-vena-cava",
+      "meshNames": ["part_inferior-vena-cava"],
+      "level": "neet",
+      "name": { "en": "Inferior Vena Cava (IVC)" },
+      "short": { "en": "Large lower vein returning deoxygenated blood from the abdomen, pelvis, and legs." },
+      "detail": { "en": "Ascends through the diaphragm to enter the inferior posterior part of the right atrium, guarded by a rudimentary Eustachian valve." },
+      "anchor": [-0.366, -0.351, 0.10],
+      "aliases": ["postcaval"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "hq1",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the strongest chamber that forms the heart's apex and pumps blood to the whole body." },
+      "answer": "left-ventricle",
+      "explanation": { "en": "The left ventricle has the thickest muscular wall because it pumps oxygen-rich blood through the aorta to the entire body." }
+    },
+    {
+      "id": "hq2",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which blood vessel is the largest artery carrying oxygenated blood out of the heart?" },
+      "options": [
+        { "en": "Vena cava" },
+        { "en": "Pulmonary vein" },
+        { "en": "Aorta" },
+        { "en": "Pulmonary artery" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "The aorta rises from the left ventricle, arches upward, and branches to supply oxygen-rich blood to every organ." }
+    },
+    {
+      "id": "hq3",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the blood vessels on the outer surface of the heart that supply oxygen to the heart muscle itself." },
+      "answer": "coronary-arteries",
+      "explanation": { "en": "The coronary arteries wrap around the heart's exterior to nourish the hard-working heart muscle (myocardium)." }
+    },
+    {
+      "id": "hq4",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the blue branching vessel that sends oxygen-poor blood to the lungs." },
+      "answer": "pulmonary-artery",
+      "explanation": { "en": "The pulmonary artery carries deoxygenated blood from the right ventricle to the lungs to pick up oxygen." }
+    },
+    {
+      "id": "hq5",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "From where do the coronary arteries arise to supply the myocardium?" },
+      "options": [
+        { "en": "Pulmonary trunk" },
+        { "en": "Base of the ascending aorta" },
+        { "en": "Superior vena cava" },
+        { "en": "Right atrium" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "Left and right coronary arteries branch directly from the aortic sinuses at the base of the ascending aorta." }
+    }
+  ]
+}

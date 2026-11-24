@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#070a14"/>
+  <path d="M 110 140 Q 70 115 45 140 Q 25 160 12 138" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round"/>
+  <rect x="115" y="95" width="180" height="90" rx="45" fill="#a855f7" fill-opacity="0.22" stroke="#f97316" stroke-width="5"/>
+  <rect x="125" y="105" width="160" height="70" rx="35" fill="#38bdf8" fill-opacity="0.12" stroke="#facc15" stroke-width="2"/>
+  <path d="M 165 140 C 175 118 205 162 215 135 C 225 112 240 155 248 138" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="260" cy="126" r="9" fill="none" stroke="#4ade80" stroke-width="3"/>
+  <text x="200" y="276" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">Bacteria</text>
+</svg>
+

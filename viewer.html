@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viewer — Bio3D</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/viewer.css" />
+</head>
+<body class="viewer-page">
+
+  <!-- Loading overlay -->
+  <div id="loading-overlay" class="loading-overlay" aria-live="polite" aria-label="Loading 3D model">
+    <div class="loading-inner">
+      <div class="loading-spinner" aria-hidden="true"></div>
+      <p id="loading-text">Loading…</p>
+      <div class="progress-bar-wrap">
+        <div id="progress-bar" class="progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error state -->
+  <div id="error-state" class="error-state" hidden>
+    <span class="error-icon" aria-hidden="true">⚠️</span>
+    <p id="error-msg">Something went wrong.</p>
+    <a href="/" class="btn-primary">Go Home</a>
+  </div>
+
+  <!-- Main viewer app -->
+  <div id="viewer-app" class="viewer-app" hidden>
+
+    <!-- Top bar -->
+    <header class="viewer-header">
+      <a href="/" class="btn-icon" aria-label="Back to home" title="Home">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 4L6 10l6 6"/>
+        </svg>
+      </a>
+      <span id="topic-title" class="viewer-topic-title">Loading…</span>
+      <div class="viewer-header-right">
+        <div id="level-toggle-viewer" class="level-toggle level-toggle-sm" role="group" aria-label="Learning level">
+          <button class="level-btn active" data-level="basic">Simple</button>
+          <button class="level-btn" data-level="neet">NEET</button>
+        </div>
+        <button id="reset-view" class="btn-icon" aria-label="Reset camera view" title="Reset view">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10a7 7 0 1 0 1-3.5"/>
+            <path d="M3 4v3h3"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Canvas container -->
+    <div class="viewer-body">
+      <div id="canvas-container" class="canvas-container" role="application" aria-label="Interactive 3D model viewer. Use two fingers to zoom on mobile, scroll wheel on desktop. Tap parts to explore.">
+        <!-- Three.js canvas and CSS2D overlay injected here by scene.js -->
+
+        <!-- Floating glassmorphic HUD -->
+        <div id="viewer-hud" class="viewer-hud">
+          <button id="btn-tour" class="hud-pill hud-pill-accent" type="button" title="Guided tour through all parts">
+            <span>▶</span> <span>Tour</span>
+          </button>
+          <button id="btn-explode" class="hud-pill" type="button" aria-pressed="false" title="Spread parts apart">
+            <span>🧩</span> <span>Explode</span>
+          </button>
+          <div id="explode-wrap" class="explode-wrap" hidden>
+            <label for="explode-slider" class="sr-only">Explode amount</label>
+            <input id="explode-slider" type="range" min="0" max="100" value="0" />
+          </div>
+          <button id="btn-animate" class="hud-pill active" type="button" aria-pressed="true" title="Toggle living animation">
+            <span>✨</span> <span class="hud-label">Motion</span>
+          </button>
+          <button id="btn-autorotate" class="hud-pill" type="button" aria-pressed="false" title="Toggle auto-spin">
+            <span>🔄</span> <span class="hud-label">Spin</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Desktop sidebar -->
+      <aside id="sidebar" class="viewer-sidebar" aria-label="Parts panel">
+        <div class="sidebar-inner">
+          <!-- Parts list -->
+          <div class="parts-list-wrap">
+            <h2 class="sidebar-section-title">Parts</h2>
+            <ul id="parts-list" class="parts-list" role="list" aria-label="List of cell parts. Click to highlight."></ul>
+          </div>
+          <!-- Info panel (desktop) -->
+          <div id="info-panel-desktop" class="info-panel-desktop" hidden>
+            <div class="info-panel-head">
+              <span class="info-color-dot" id="info-dot-desktop"></span>
+              <span class="info-step-badge" id="info-step-desktop"></span>
+            </div>
+            <div class="info-panel-name" id="info-name-desktop"></div>
+            <div class="info-panel-desc" id="info-desc-desktop"></div>
+            <div class="info-panel-detail" id="info-detail-desktop" hidden></div>
+            <div class="info-nav">
+              <button id="info-prev-desktop" class="btn-ghost btn-sm" type="button">← Prev</button>
+              <button id="info-next-desktop" class="btn-primary btn-sm" type="button">Next →</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Mode tabs -->
+    <nav class="mode-tabs" role="tablist" aria-label="Viewer modes">
+      <button class="mode-tab active" data-mode="explore" role="tab" aria-selected="true">
+        <span class="mode-icon" aria-hidden="true">👁</span> Explore
+      </button>
+      <button class="mode-tab" data-mode="label" role="tab" aria-selected="false">
+        <span class="mode-icon" aria-hidden="true">🏷</span> Label
+      </button>
+      <button class="mode-tab" data-mode="quiz" role="tab" aria-selected="false">
+        <span class="mode-icon" aria-hidden="true">❓</span> Quiz
+      </button>
+    </nav>
+
+    <!-- Mobile bottom sheet (info panel) -->
+    <div id="info-panel-mobile" class="info-panel-mobile" aria-live="polite">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <div class="sheet-content">
+        <div class="info-panel-head">
+          <span class="info-color-dot" id="info-dot-mobile"></span>
+          <span class="info-step-badge" id="info-step-mobile"></span>
+        </div>
+        <div class="info-panel-name" id="info-name-mobile"></div>
+        <div class="info-panel-desc" id="info-desc-mobile"></div>
+        <div class="info-panel-detail" id="info-detail-mobile" hidden></div>
+        <div class="info-nav">
+          <button id="info-prev-mobile" class="btn-ghost btn-sm" type="button">← Prev</button>
+          <button id="info-next-mobile" class="btn-primary btn-sm" type="button">Next →</button>
+          <button id="info-close" class="btn-ghost btn-sm" aria-label="Close info panel" style="margin-left:auto">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Label mode UI overlay -->
+    <div id="label-ui" class="label-ui" hidden>
+      <div class="label-score-bar">
+        <span id="label-score-text">Label the parts</span>
+        <button id="label-finish" class="btn-primary btn-sm">Finish</button>
+      </div>
+      <div id="label-tray-wrap" class="label-tray-wrap">
+        <div id="label-tray" class="label-tray" role="list" aria-label="Label chips — tap a chip then tap a pin"></div>
+      </div>
+    </div>
+
+    <!-- Quiz mode UI -->
+    <div id="quiz-ui" class="quiz-ui" hidden>
+      <div class="quiz-progress">
+        <div id="quiz-prog-bar" class="quiz-prog-bar"></div>
+      </div>
+      <div class="quiz-card" id="quiz-card">
+        <p id="quiz-question" class="quiz-question"></p>
+        <div id="quiz-options" class="quiz-options" role="list"></div>
+        <div id="quiz-tap-hint" class="quiz-tap-hint" hidden>👆 Tap the correct part on the model above</div>
+        <div id="quiz-feedback" class="quiz-feedback" hidden>
+          <span id="quiz-feedback-icon" aria-hidden="true"></span>
+          <p id="quiz-explanation"></p>
+          <button id="quiz-next" class="btn-primary">Next →</button>
+        </div>
+      </div>
+      <!-- Final score -->
+      <div id="quiz-final" class="quiz-final" hidden>
+        <div class="quiz-score-display">
+          <span id="quiz-score-num" class="quiz-score-big"></span>
+          <span class="quiz-score-label">Score</span>
+        </div>
+        <p id="quiz-score-msg" class="quiz-score-msg"></p>
+        <div class="quiz-final-actions">
+          <button id="quiz-retry" class="btn-primary">Try Again</button>
+          <button id="quiz-to-explore" class="btn-ghost">Back to Explore</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /viewer-app -->
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script type="module" src="/src/main-viewer.js"></script>
+</body>
+</html>
+

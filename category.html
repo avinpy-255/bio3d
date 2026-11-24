@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category — Bio3D</title>
+  <link rel="stylesheet" href="/src/styles/base.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Bio3D home">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Bio<strong>3D</strong></span>
+      </a>
+      <div class="header-controls">
+        <a href="/" class="btn-ghost">← Home</a>
+        <div id="level-toggle-cat" class="level-toggle" role="group" aria-label="Learning level">
+          <button class="level-btn active" data-level="basic">Simple</button>
+          <button class="level-btn" data-level="neet">NEET</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1 id="category-title" class="page-title">Loading…</h1>
+      <p id="category-desc" class="page-desc"></p>
+    </section>
+
+    <section class="category-topics">
+      <div id="topic-grid" class="topic-grid">
+        <div class="topic-card-skeleton"></div>
+        <div class="topic-card-skeleton"></div>
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span>🔭</span>
+        <p>No topics in this category yet.<br>More coming soon!</p>
+        <a href="/" class="btn-primary">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>🧬 Bio3D — Free for every student</span>
+      <a href="/about.html">Credits &amp; Licences</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main-category.js"></script>
+</body>
+</html>
+

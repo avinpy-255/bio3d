@@ -1,0 +1,185 @@
+{
+  "id": "fish",
+  "version": 1,
+  "title": { "en": "Fish Anatomy" },
+  "category": "animals",
+
+  "model": {
+    "src": "/models/fish.glb",
+    "sizeKB": 0,
+    "source": "Bio3D Procedural Model",
+    "sourceUrl": "https://3dprint.nih.gov/",
+    "author": "Bio3D Project",
+    "licence": "CC0",
+    "credit": "",
+    "modifications": "Procedural 3D bony fish anatomy model exported as GLB."
+  },
+
+  "camera": {
+    "position": [0, 0.2, 3.6],
+    "target": [0, 0, 0],
+    "minDistance": 1.5,
+    "maxDistance": 7.5
+  },
+
+  "parts": [
+    {
+      "id": "body",
+      "meshNames": ["part_body"],
+      "level": "basic",
+      "name": { "en": "Streamlined Body & Scales" },
+      "short": { "en": "A smooth, boat-shaped body covered in slippery scales to glide easily through water." },
+      "detail": { "en": "Fusiform (streamlined) body covered with overlapping dermal scales (cycloid or ctenoid in bony fish) and mucus to reduce drag in water." },
+      "anchor": [0.05, 0.25, 0.28],
+      "aliases": ["scales", "trunk"]
+    },
+    {
+      "id": "head-mouth",
+      "meshNames": ["part_head-mouth"],
+      "level": "basic",
+      "name": { "en": "Head & Mouth" },
+      "short": { "en": "Front end of the fish used for eating food and taking in water for breathing." },
+      "detail": { "en": "Bony fishes (Osteichthyes) typically have a terminal mouth; water enters through the mouth and is pumped across the gills." },
+      "anchor": [0.85, -0.02, 0.15],
+      "aliases": ["mouth"]
+    },
+    {
+      "id": "eye",
+      "meshNames": ["part_eye"],
+      "level": "basic",
+      "name": { "en": "Eyes" },
+      "short": { "en": "Large lidless eyes on each side of the head for spotting food and predators underwater." },
+      "detail": { "en": "Fish eyes have spherical lenses adapted for underwater vision and lack eyelids (staying moist naturally in water)." },
+      "anchor": [0.71, 0.10, 0.22],
+      "aliases": []
+    },
+    {
+      "id": "operculum",
+      "meshNames": ["part_operculum"],
+      "level": "basic",
+      "name": { "en": "Gill Cover (Operculum)" },
+      "short": { "en": "A protective bony flap covering the gills; opens and closes to pump water over them." },
+      "detail": { "en": "Present in bony fishes (Osteichthyes) and absent in cartilaginous fishes (Chondrichthyes like sharks). Shields delicate gill filaments and pumps water continuously." },
+      "anchor": [0.48, -0.02, 0.26],
+      "aliases": ["gill cover"]
+    },
+    {
+      "id": "dorsal-fin",
+      "meshNames": ["part_dorsal-fin"],
+      "level": "basic",
+      "name": { "en": "Dorsal Fin" },
+      "short": { "en": "The top fin that acts like a ship's keel to keep the fish upright and balanced." },
+      "detail": { "en": "Unpaired median fin on the dorsal surface preventing rolling so the fish stays steady while swimming or turning." },
+      "anchor": [0.02, 0.55, 0.05],
+      "aliases": []
+    },
+    {
+      "id": "pectoral-fin",
+      "meshNames": ["part_pectoral-fin"],
+      "level": "basic",
+      "name": { "en": "Pectoral Fins" },
+      "short": { "en": "A pair of side fins near the head used for steering, hovering, and braking." },
+      "detail": { "en": "Paired anterior fins corresponding to the forelimbs of land vertebrates. Provide fine manoeuvrability, turning, and stopping." },
+      "anchor": [0.30, -0.14, 0.35],
+      "aliases": []
+    },
+    {
+      "id": "pelvic-anal-fins",
+      "meshNames": ["part_pelvic-anal-fins"],
+      "level": "basic",
+      "name": { "en": "Pelvic & Anal Fins" },
+      "short": { "en": "Bottom fins that help keep the fish level and stop it from tipping sideways." },
+      "detail": { "en": "Paired pelvic fins (ventral) and unpaired anal fin (posterior ventral) work together with the dorsal fin to stabilise pitch and roll." },
+      "anchor": [-0.15, -0.44, 0.05],
+      "aliases": ["pelvic fin", "anal fin"]
+    },
+    {
+      "id": "tail-fin",
+      "meshNames": ["part_tail-fin"],
+      "level": "basic",
+      "name": { "en": "Tail Fin (Caudal Fin)" },
+      "short": { "en": "The powerful back fin that sweeps side-to-side to push the fish forward." },
+      "detail": { "en": "Homocercal (symmetrical lobes) in most bony fishes; generates forward thrust and acts as a rudder for sharp direction changes." },
+      "anchor": [-0.96, 0, 0.05],
+      "aliases": ["caudal fin"]
+    },
+    {
+      "id": "gills",
+      "meshNames": ["part_gills"],
+      "level": "neet",
+      "name": { "en": "Gills" },
+      "short": { "en": "Feathery red breathing organs under the gill cover that absorb dissolved oxygen from water." },
+      "detail": { "en": "Four pairs of filamentous gill arches in Osteichthyes. Rich capillary beds use counter-current exchange — blood flows opposite to water — maximising O₂ uptake." },
+      "anchor": [0.46, -0.02, 0.14],
+      "aliases": ["gill arches"]
+    },
+    {
+      "id": "swim-bladder",
+      "meshNames": ["part_swim-bladder"],
+      "level": "neet",
+      "name": { "en": "Swim Bladder (Air Bladder)" },
+      "short": { "en": "An internal gas-filled sac that lets bony fish float effortlessly without sinking." },
+      "detail": { "en": "Hydrostatic organ regulating buoyancy in Osteichthyes (absent in Chondrichthyes like sharks, which must swim continuously or rely on oily livers)." },
+      "anchor": [-0.02, 0.12, 0.12],
+      "aliases": ["air bladder"]
+    },
+    {
+      "id": "lateral-line",
+      "meshNames": ["part_lateral-line"],
+      "level": "neet",
+      "name": { "en": "Lateral Line System" },
+      "short": { "en": "A line of tiny sensors along each side that detects water vibrations and nearby movement." },
+      "detail": { "en": "Mechanoreceptive canal running along the flanks containing neuromast hair cells. Detects pressure changes, currents, prey, and obstacles even in murky water." },
+      "anchor": [0.05, 0.08, 0.29],
+      "aliases": ["neuromasts"]
+    }
+  ],
+
+  "quiz": [
+    {
+      "id": "aq1",
+      "type": "tap-part",
+      "level": "basic",
+      "question": { "en": "Tap the powerful back fin that pushes the fish forward through the water." },
+      "answer": "tail-fin",
+      "explanation": { "en": "The tail (caudal) fin sweeps side-to-side to create forward thrust and helps steer the fish." }
+    },
+    {
+      "id": "aq2",
+      "type": "mcq",
+      "level": "basic",
+      "question": { "en": "Which part protects the delicate gills and helps pump water over them?" },
+      "options": [
+        { "en": "Dorsal fin" },
+        { "en": "Operculum (gill cover)" },
+        { "en": "Tail fin" },
+        { "en": "Pectoral fin" }
+      ],
+      "answer": 1,
+      "explanation": { "en": "The operculum is a bony flap on each side of a bony fish's head that covers the gills and pumps water past them." }
+    },
+    {
+      "id": "aq3",
+      "type": "tap-part",
+      "level": "neet",
+      "question": { "en": "Tap the internal organ that controls buoyancy in bony fishes (Osteichthyes)." },
+      "answer": "swim-bladder",
+      "explanation": { "en": "The swim bladder adjusts gas volume so bony fish can stay neutrally buoyant at different depths without sinking." }
+    },
+    {
+      "id": "aq4",
+      "type": "mcq",
+      "level": "neet",
+      "question": { "en": "Which sensory system runs along the sides of a fish to detect water vibrations?" },
+      "options": [
+        { "en": "Operculum" },
+        { "en": "Swim bladder" },
+        { "en": "Lateral line system" },
+        { "en": "Dorsal fin" }
+      ],
+      "answer": 2,
+      "explanation": { "en": "The lateral line contains neuromast receptors that sense vibrations and pressure waves in the surrounding water." }
+    }
+  ]
+}
+

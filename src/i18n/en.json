@@ -1,0 +1,48 @@
+{
+  "appName": "Bio3D",
+  "tagline": "Explore Biology in 3D",
+  "levels": {
+    "basic": "Simple",
+    "neet": "NEET"
+  },
+  "modes": {
+    "explore": "Explore",
+    "label": "Label",
+    "quiz": "Quiz"
+  },
+  "ui": {
+    "back": "Back",
+    "home": "Home",
+    "resetView": "Reset view",
+    "close": "Close",
+    "next": "Next →",
+    "tryAgain": "Try Again",
+    "backToExplore": "Back to Explore",
+    "finish": "Finish",
+    "showAnswer": "Show answer",
+    "correct": "Correct! ✓",
+    "wrong": "Not quite. Try again!",
+    "tapHint": "👆 Tap the correct part on the model above",
+    "selectPinFirst": "Tap a numbered pin first",
+    "noPinsAvailable": "No parts to label in this mode",
+    "quizComplete": "Quiz complete!",
+    "quizPerfect": "Perfect score! Outstanding! 🎉",
+    "quizGood": "Great work! Keep practising! 💪",
+    "quizOk": "Good try! Review the parts and try again 🔬",
+    "loading": "Loading…",
+    "loadingModel": "Loading 3D model…",
+    "errorNoTopic": "No topic specified in URL.",
+    "errorLoadFailed": "Failed to load topic.",
+    "errorModelFailed": "Failed to load 3D model.",
+    "errorNoBuilder": "No model available for this topic.",
+    "searchPlaceholder": "Search topics…",
+    "searchEmpty": "No results for",
+    "tapToExplore": "Tap any part to learn about it",
+    "partsList": "Parts",
+    "credits": "Credits & Licences",
+    "comingSoon": "Coming soon",
+    "labelInstruction": "Label all the numbered parts",
+    "scoreOf": "Score"
+  }
+}
+
